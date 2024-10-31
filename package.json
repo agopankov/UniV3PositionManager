@@ -1,0 +1,41 @@
+{
+  "name": "uni3manager",
+  "version": "1.0.0",
+  "description": "UniswapV3 Position Manager",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "rm -rf build/",
+    "test": "truffle test",
+    "test:sepolia": "truffle test --network sepolia",
+    "deploy:sepolia": "npm run clean && truffle migrate --network sepolia",
+    "verify:sepolia": "truffle run verify UniV3PositionManager --network sepolia",
+    "deploy:bsc": "npm run clean && truffle migrate --network bsc",
+    "verify:bsc": "truffle run verify UniV3PositionManager --network bsc",
+    "build": "truffle build"
+  },
+  "keywords": [
+    "uniswap",
+    "v3",
+    "defi"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.4",
+    "dotenv": "^16.4.5",
+    "truffle": "^5.11.5"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "chai": "^4.5.0",
+    "chai-bn": "^0.3.1",
+    "truffle-flattener": "^1.6.0",
+    "truffle-plugin-verify": "^0.6.7"
+  }
+}
